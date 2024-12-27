@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Bites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            display: flex;
+            align-items: center; /* Ensures vertical alignment */
+            padding: 20px 50px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            max-width: 100px; /* Adjust the size of the logo */
+            height: auto;
+            margin-right: 10px; /* Decreased margin between logo and text */
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #FF5722;
+            margin: 0; /* Removed margin */
+        }
+
+        /* Navigation styles */
+        header nav {
+            margin-left: auto; /* Pushes nav to the right */
+            /* background-color: #FF5722; */
+            padding: 10px 20px; /* Adds padding for the nav */
+            border-radius: 5px; /* Optional: Adds rounded corners */
+        }
+
+        header nav a {
+    display: inline-block; /* Makes the anchor behave like a button */
+    color: white; /* White text */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px; /* Adds padding inside the buttons */
+    background-color: #FF5722; /* Orange background */
+    border-radius: 10px; /* Rounded corners */
+    margin-left: 12px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+header nav a:hover {
+    background-color: #E64A19; /* Darker shade on hover */
+}
+
+
+        .hero {
+            background: url('https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 230px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0 0 10px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin: 0 0 20px;
+        }
+
+        .hero button {
+            background-color: #FF5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .hero button:hover {
+            background-color: #E64A19;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 15px;
+            background-color: #ffffff;
+            margin-top: 40px;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .feature img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+        }
+
+        .feature h3 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .feature p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+   <header>
+    <img src="https://imgs.search.brave.com/EZU9QLgpse_7VeGBapPW1mn8vATg2QEpHgb2RWiI_iw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTMw/MTA0NDE5NC92ZWN0/b3IvaGFwcHktY2hl/Zi13b21hbi5qcGc_/cz02MTJ4NjEyJnc9/MCZrPTIwJmM9Q3NW/YVBUbWNCbnFHMEJa/TDJCNk1NbEVnb2o1/MHZSRlU3aUdGekJ0/Tkltdz0" alt="Mama Bites Logo" class="logo">
+    <h1>Mama Bites</h2>
+    <nav>
+        <a href="#">Restaurants</a>
+        <a href="#">Menu</a>
+        <a href="#">Login</a>
+    </nav>
+</header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Mama Bites</h2>
+            <p>Delicious homestyle meals delivered to your doorstep</p>
+            <button>Order Now</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <img src="https://img.icons8.com/color/96/chef-hat.png" alt="Expert Chefs">
+            <h3>Expert Chefs</h3>
+            <p>Authentic recipes from experienced chefs</p>
+        </div>
+        <div class="feature">
+            <img src="https://img.icons8.com/color/96/clock.png" alt="Timely Delivery">
+            <h3>Timely Delivery</h3>
+            <p>Hot meals delivered on time</p>
+        </div>
+        <div class="feature">
+            <img src="https://img.icons8.com/color/96/worldwide-location.png" alt="Wide Coverage">
+            <h3>Wide Coverage</h3>
+            <p>Serving all major locations</p>
+        </div>
+        <div class="feature">
+            <img src="https://img.icons8.com/color/96/money.png" alt="Easy Payment">
+            <h3>Easy Payment</h3>
+            <p>Multiple payment options</p>
+        </div>
+    </section>
+
+</body>
+</html>

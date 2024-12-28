@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mama Bites</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
             margin: 0;
@@ -14,7 +15,7 @@
         header {
             display: flex;
             align-items: center; /* Ensures vertical alignment */
-            padding: 20px 50px;
+            padding: 10px 50px;
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -77,7 +78,7 @@ header nav a:hover {
         .hero-content {
             position: relative;
             z-index: 2;
-            text-align: left;
+            text-align: center;
             
         }
 
@@ -150,9 +151,9 @@ header nav a:hover {
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Mama Bites</h2>
-            <p>Delicious homestyle meals delivered to your doorstep</p>
-            <button>Order Now</button>
+            <h2 id="mama">Mama Bites</h2>
+            <p id="para">Delicious homestyle meals delivered to your doorstep</p>
+            <button id="button">Order Now</button>
         </div>
     </section>
 
@@ -178,6 +179,31 @@ header nav a:hover {
             <p>Multiple payment options</p>
         </div>
     </section>
+    
+    <div id="offer-box-overlay">
+        <div id="offer-box">
+          <div id="offer-left">
+            <span id="close-offer-box">&times;</span>
+            <h1><b>Unlock 10% Off</b></h1>
+            <h1><b>Your First Order</b></h1>
+            <p>Sign up now to get exclusive deals, discounts, and more!</p>
+            <form id="offer-form">
+              <input type="email" id="email-input" placeholder="Enter your email" required />
+              <button id="unlock-button" type="submit">Unlock Offer</button>
+            </form>
+            <p class="agreement-text">
+              By sign up, you agree to receive email marketing.
+            </p>
+            <div class="center-button">
+            <button id="no-thanks-button">No, Thanks</button>
+        </div>
+          </div>
+          <div id="offer-right">
+            <img src="Screenshot 2024-12-28 124455.png" alt="Delicious Dish" />
+          </div>
+        </div>
+      </div>
 
+<script src="script.js"></script>
 </body>
 </html>

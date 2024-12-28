@@ -135,6 +135,17 @@ header nav a:hover {
             font-size: 0.9rem;
             color: #666;
         }
+        /* Hover effect for feature cards */
+.features .feature:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 10px rgba(21, 21, 21, 0.15);
+}
+
+.features:hover > .feature:not(:hover) {
+    filter: blur(5px);
+    transform: scale(0.95);
+}
+
     </style>
 </head>
 <body>

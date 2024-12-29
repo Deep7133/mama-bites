@@ -35,16 +35,16 @@
         }
 
         header nav a {
-    display: inline-block; /* Makes the anchor behave like a button */
-    color: white; /* White text */
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 20px; /* Adds padding inside the buttons */
-    background-color: #FF5722; /* Orange background */
-    border-radius: 10px; /* Rounded corners */
-    margin-left: 12px; /* Space between buttons */
-    transition: background-color 0.3s; /* Smooth transition on hover */
-}
+            display: inline-block; /* Makes the anchor behave like a button */
+            color: white; /* White text */
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 10px 20px; /* Adds padding inside the buttons */
+            background-color: #FF5722; /* Orange background */
+            border-radius: 10px; /* Rounded corners */
+            margin-left: 12px; /* Space between buttons */
+            transition: background-color 0.3s; /* Smooth transition on hover */
+        }
 
 header nav a:hover {
     background-color: #E64A19; /* Darker shade on hover */
@@ -129,6 +129,7 @@ header nav a:hover {
             font-size: 0.9rem;
             color: #666;
         }
+
         /* Hover effect for feature cards */
 .features .feature:hover {
     transform: scale(1.12);
@@ -198,3 +199,52 @@ header nav a:hover {
     color: #777;
 }
 
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: row; /* Keep items in the same line */
+        padding: 10px 20px;
+        justify-content: flex-start; /* Align the logo and heading to the left */
+    }
+
+    header .logo {
+        max-width: 100px; /* Adjust logo size for smaller screens */
+    }
+
+    header h1 {
+        font-size: 3rem; /* Reduce font size on smaller screens */
+        text-align: left; /* Ensures text is left aligned */
+        margin-left: 10px; /* Optional: Add space between logo and text */
+    }
+
+    header nav {
+        margin-left: 10px;
+        margin-left: auto; /* Pushes nav to the right */
+    }
+
+    header nav a {
+        font-size: 0.9rem; /* Smaller font size for navigation items */
+    }
+}
+
+/* For mobile devices (480px or below) */
+@media only screen and (max-width: 480px) {
+    header {
+        padding: 10px 15px; /* Reduce padding on mobile */
+    }
+
+    header .logo {
+        max-width: 60px; /* Further reduce logo size on mobile */
+    }
+
+    header nav {
+        margin-left: auto; /* Pushes nav to the right */   
+    }
+
+    header h1 {
+        font-size: 2rem; /* Smaller font size on mobile */
+    }
+
+    header nav a {
+        padding: 8px 15px; /* Smaller padding on mobile */
+    }
+}

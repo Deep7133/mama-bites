@@ -36,12 +36,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    text-align: left;
+    text-align: center;
     box-sizing: border-box; /* Prevents content from overflowing */
   }
   
   #offer-left h1 {
-    font-size: 32px; /* Larger font size */
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    font-size: 40px; /* Larger font size */
     margin-bottom: 15px;
     color: #333; /* Darker color for better readability */
     font-weight: bold;
@@ -49,7 +52,7 @@
   }
   
   #offer-left p {
-    font-size: 18px;
+    font-size: 14px;
     margin: 10px 0 20px;
     color: #666;
     line-height: 1.5;
@@ -88,13 +91,15 @@
   }
   
   #no-thanks-button {
+    margin-top: -60px;
     background: transparent;
     color: #666;
     border: none;
-    font-size: 12px;
+    font-size: 15px;
     justify-content: center;
     cursor: pointer;
   }
+
   #offer-left .center-button {
     display: flex;
     justify-content: center; /* Centers the button horizontally */

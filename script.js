@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+
   // Get the menu icon element
 const menuIcon = document.querySelector('.containerr');
 

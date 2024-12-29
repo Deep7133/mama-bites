@@ -1,0 +1,99 @@
+@media (max-width: 768px) { 
+    /* Hamburger icon styles */
+    .containerr {
+      position: fixed;
+      left: 20px;
+      top: 20px;
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+  
+    /* Hide the menu icon when scrolled */
+    .containerr.hidden {
+      opacity: 0;  /* Hide the menu icon */
+      pointer-events: none;  /* Disable interactions */
+      transition: opacity 0.3s ease;
+    }
+  
+    .bar1, .bar2, .bar3 {
+      width: 30px;
+      height: 5px;
+      background-color: #333;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  
+    /* Hamburger icon transition when clicked */
+    .containerr.change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg);
+      background-color: white;
+    }
+  
+    .containerr.change .bar2 {
+      opacity: 0;
+    }
+  
+    .containerr.change .bar3 {
+      transform: translate(0, -11px) rotate(45deg);
+      background-color: white;
+    }
+  
+    /* Dropdown menu styles */
+    .dropdown-menu {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+  
+    /* When the menu is open, make it visible */
+    .containerr.change + .dropdown-menu {
+      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    /* Dropdown links styles */
+    .dropdown-menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+      margin: 20px 0;
+      padding: 10px 20px;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+  
+    /* Underline effect on hover */
+    .dropdown-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: white;
+      left: 0;
+      bottom: 0;
+      transition: width 0.3s ease;
+    }
+  
+    .dropdown-menu a:hover::after {
+      width: 100%;
+    }
+  
+    /* Hover effect for links */
+    .dropdown-menu a:hover {
+      transform: scale(1.1);
+    }
+  }
+  

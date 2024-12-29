@@ -6,147 +6,9 @@
     <title>Mama Bites</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        header {
-            display: flex;
-            align-items: center; /* Ensures vertical alignment */
-            padding: 10px 50px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        header .logo {
-            max-width: 100px; /* Adjust the size of the logo */
-            height: auto;
-            margin-right: 10px; /* Decreased margin between logo and text */
-        }
-
-        header h1 {
-            font-size: 1.8rem;
-            color: #FF5722;
-            margin: 0; /* Removed margin */
-        }
-
-        /* Navigation styles */
-        header nav {
-            margin-left: auto; /* Pushes nav to the right */
-            /* background-color: #FF5722; */
-            padding: 10px 20px; /* Adds padding for the nav */
-            border-radius: 5px; /* Optional: Adds rounded corners */
-        }
-
-        header nav a {
-    display: inline-block; /* Makes the anchor behave like a button */
-    color: white; /* White text */
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 20px; /* Adds padding inside the buttons */
-    background-color: #FF5722; /* Orange background */
-    border-radius: 10px; /* Rounded corners */
-    margin-left: 12px; /* Space between buttons */
-    transition: background-color 0.3s; /* Smooth transition on hover */
-}
-
-header nav a:hover {
-    background-color: #E64A19; /* Darker shade on hover */
-}
-
-
-        .hero {
-            background: url('\Screenshot 2024-12-26 223558.png') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 230px 20px;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin: 0 0 10px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin: 0 0 20px;
-        }
-
-        .hero button {
-            background-color: #FF5722;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .hero button:hover {
-            background-color: #E64A19;
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 15px;
-            background-color: #ffffff;
-            margin-top: 40px;
-        }
-
-        .feature {
-            text-align: center;
-            max-width: 200px;
-        }
-
-        .feature img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .feature p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        /* Hover effect for feature cards */
-.features .feature:hover {
-    transform: scale(1.12);
-    box-shadow: 0 6px 10px rgba(21, 21, 21, 0.15);
-}
-
-.features:hover > .feature:not(:hover) {
-    filter: blur(5px);
-    transform: scale(0.95);
-}
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="remove.css">
 </head>
 <body>
 
@@ -215,6 +77,52 @@ header nav a:hover {
         </div>
       </div>
 
+      <div class="container">
+        <h1 class="heading">How Our Service Works?</h1>
+        <p class="subheading">At TiffinSearch, we provide a user-friendly platform that connects customers with local tiffin service providers in their area. Our mission is to make it easier than ever to find high-quality, homemade meals that are tailored to your preferences and dietary needs. Here's how it works:</p>
+
+        <div class="steps">
+            <div class="step">
+                <img src="Screenshot 2024-12-29 130211.png" alt="Search for Service Providers">
+                <p class="step-title">Step 1</p>
+                <p class="para">Search for Service Providers</p>
+            </div>
+            <div class="step">
+                <img src="Screenshot 2024-12-29 130225.png" alt="View Service Provider Details">
+                <p class="step-title">Step 2</p>
+                <p class="para">View Service Provider Details</p>
+            </div>
+            <div class="step">
+                <img src="Screenshot 2024-12-29 130251.png" alt="Order/Subscribe a Meal">
+                <p class="step-title">Step 3</p>
+                <p class="para">Order/Subscribe a Meal</p>
+            </div>
+            <div class="step">
+                <img src="Screenshot 2024-12-29 130314.png" alt="Manage Subscriptions">
+                <p class="step-title">Step 4</p>
+                <p class="para">Manage Subscriptions</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            At Mamabites, we're dedicated to making the process of finding and subscribing to local service providers as easy as possible for our customers. We strive to provide a seamless experience that allows our customers to find the right service provider, subscribe to their services, and manage their subscriptions with ease.
+        </div>
+    </div>
+    
+    <!-- Menu Icon -->
+<div class="containerr" onclick="this.classList.toggle('change')">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  
+  <!-- Dropdown Menu -->
+  <div class="dropdown-menu">
+    <a href="#">Restaurant</a>
+    <a href="#">Menu</a>
+    <a href="#">Login</a>
+  </div>
+  
 <script src="script.js"></script>
 </body>
 </html>

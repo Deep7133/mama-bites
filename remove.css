@@ -1,0 +1,6 @@
+/* Hide navigation on small screens */
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}

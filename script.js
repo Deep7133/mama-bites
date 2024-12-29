@@ -20,4 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
       closeModal();
     });
   });
-  
+
+  // Get the menu icon element
+const menuIcon = document.querySelector('.containerr');
+
+// Listen to the scroll event
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {  // Change 50 to whatever scroll distance you want
+        menuIcon.classList.add('hidden');  // Add the hidden class to hide the icon
+    } else {
+        menuIcon.classList.remove('hidden');  // Remove the hidden class to show the icon
+    }
+});

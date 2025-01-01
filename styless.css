@@ -5,6 +5,7 @@
 
     header {
         display: flex;
+        height: 70px;
         align-items: center;
         /* Ensures vertical alignment */
         padding: 10px 50px;
@@ -14,7 +15,7 @@
     }
 
     header .logo {
-        margin-left: 50px;
+        margin-left: 30px;
         max-width: 100px;
         /* Adjust the size of the logo */
         height: auto;
@@ -23,8 +24,8 @@
     }
 
     header h1 {
-        font-size: 3rem;
-        color: #FF5722;
+        font-size: 2.5rem;
+        color: #fe511c;
         margin: 0;
         /* Removed margin */
     }
@@ -225,6 +226,7 @@
 
         header .logo {
             max-width: 100px;
+            margin-left: 50px;
             /* Adjust logo size for smaller screens */
         }
 

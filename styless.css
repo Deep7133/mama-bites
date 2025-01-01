@@ -1,250 +1,278 @@
     body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-        }
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
 
+    header {
+        display: flex;
+        align-items: center;
+        /* Ensures vertical alignment */
+        padding: 10px 50px;
+        padding-left: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header .logo {
+        margin-left: 50px;
+        max-width: 100px;
+        /* Adjust the size of the logo */
+        height: auto;
+        margin-right: 10px;
+        /* Decreased margin between logo and text */
+    }
+
+    header h1 {
+        font-size: 3rem;
+        color: #FF5722;
+        margin: 0;
+        /* Removed margin */
+    }
+
+    /* Navigation styles */
+    header nav {
+        margin-left: 20px;
+        margin-left: auto;
+        /* Pushes nav to the right */
+        /* background-color: #FF5722; */
+        padding: 10px 20px;
+        /* Adds padding for the nav */
+        border-radius: 5px;
+        /* Optional: Adds rounded corners */
+    }
+
+    header nav a {
+        display: inline-block;
+        /* Makes the anchor behave like a button */
+        color: white;
+        /* White text */
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 10px 20px;
+        /* Adds padding inside the buttons */
+        background-color: #FF5722;
+        /* Orange background */
+        border-radius: 10px;
+        /* Rounded corners */
+        margin-left: 12px;
+        /* Space between buttons */
+        transition: background-color 0.3s;
+        /* Smooth transition on hover */
+    }
+
+    header nav a:hover {
+        background-color: #E64A19;
+        /* Darker shade on hover */
+    }
+
+
+    .hero {
+        background: url('\Screenshot 2024-12-26 223558.png') no-repeat center center/cover;
+        color: white;
+        text-align: center;
+        padding: 230px 20px;
+        position: relative;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+        margin: 0 0 10px;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+        margin: 0 0 20px;
+    }
+
+    .hero button {
+        background-color: #FF5722;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .hero button:hover {
+        background-color: #E64A19;
+    }
+
+    .features {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px 15px;
+        background-color: #ffffff;
+        margin-top: 40px;
+    }
+
+    .feature {
+        text-align: center;
+        max-width: 200px;
+    }
+
+    .feature img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .feature h3 {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    /* Hover effect for feature cards */
+    .features .feature:hover {
+        transform: scale(1.12);
+        box-shadow: 0 6px 10px rgba(21, 21, 21, 0.15);
+    }
+
+    .features:hover>.feature:not(:hover) {
+        filter: blur(5px);
+        transform: scale(0.95);
+    }
+
+    .container {
+        max-width: 100%;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .heading {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .subheading {
+        font-size: 1.2rem;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .steps {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .step {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .step img {
+        max-width: 110%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .step-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        font-weight: lighter;
+    }
+
+    .para {
+        font-size: 1.2rem;
+        font-weight: bolder;
+    }
+
+    .footer {
+        margin-top: 20px;
+        font-size: 1rem;
+        color: #777;
+    }
+
+    @media only screen and (max-width: 768px) {
         header {
-            display: flex;
-            align-items: center; /* Ensures vertical alignment */
-            padding: 10px 50px;
-            padding-left: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex-direction: row;
+            /* Keep items in the same line */
+            padding: 10px 20px;
+            justify-content: flex-start;
+            /* Align the logo and heading to the left */
         }
 
         header .logo {
-            margin-left: 50px;
-            max-width: 100px; /* Adjust the size of the logo */
-            height: auto;
-            margin-right: 10px; /* Decreased margin between logo and text */
+            max-width: 100px;
+            /* Adjust logo size for smaller screens */
         }
 
         header h1 {
             font-size: 3rem;
-            color: #FF5722;
-            margin: 0; /* Removed margin */
+            /* Reduce font size on smaller screens */
+            text-align: left;
+            /* Ensures text is left aligned */
+            margin-left: 10px;
+            /* Optional: Add space between logo and text */
         }
 
-        /* Navigation styles */
         header nav {
-            margin-left: 20px;
-            margin-left: auto; /* Pushes nav to the right */
-            /* background-color: #FF5722; */
-            padding: 10px 20px; /* Adds padding for the nav */
-            border-radius: 5px; /* Optional: Adds rounded corners */
+            margin-left: 10px;
+            margin-left: auto;
+            /* Pushes nav to the right */
         }
 
         header nav a {
-            display: inline-block; /* Makes the anchor behave like a button */
-            color: white; /* White text */
-            text-decoration: none;
-            font-size: 1rem;
-            padding: 10px 20px; /* Adds padding inside the buttons */
-            background-color: #FF5722; /* Orange background */
-            border-radius: 10px; /* Rounded corners */
-            margin-left: 12px; /* Space between buttons */
-            transition: background-color 0.3s; /* Smooth transition on hover */
-        }
-
-header nav a:hover {
-    background-color: #E64A19; /* Darker shade on hover */
-}
-
-
-        .hero {
-            background: url('\Screenshot 2024-12-26 223558.png') no-repeat center center/cover;
-            color: white;
-            text-align: center;
-            padding: 230px 20px;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            
-        }
-
-        .hero h2 {
-            font-size: 3rem;
-            margin: 0 0 10px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin: 0 0 20px;
-        }
-
-        .hero button {
-            background-color: #FF5722;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .hero button:hover {
-            background-color: #E64A19;
-        }
-
-        .features {
-            display: flex;
-            justify-content: space-around;
-            padding: 20px 15px;
-            background-color: #ffffff;
-            margin-top: 40px;
-        }
-
-        .feature {
-            text-align: center;
-            max-width: 200px;
-        }
-
-        .feature img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
-
-        .feature h3 {
-            font-size: 1.2rem;
-            margin: 10px 0;
-        }
-
-        .feature p {
             font-size: 0.9rem;
-            color: #666;
+            /* Smaller font size for navigation items */
+        }
+    }
+
+    /* For mobile devices (480px or below) */
+    @media only screen and (max-width: 480px) {
+        header {
+            padding: 10px 15px;
+            /* Reduce padding on mobile */
         }
 
-        /* Hover effect for feature cards */
-.features .feature:hover {
-    transform: scale(1.12);
-    box-shadow: 0 6px 10px rgba(21, 21, 21, 0.15);
-}
+        header .logo {
+            max-width: 60px;
+            /* Further reduce logo size on mobile */
+        }
 
-.features:hover > .feature:not(:hover) {
-    filter: blur(5px);
-    transform: scale(0.95);
-}
+        header nav {
+            margin-left: auto;
+            /* Pushes nav to the right */
+        }
 
-.container {
-    max-width: 100%;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    box-sizing: border-box;
-}
+        header h1 {
+            font-size: 2rem;
+            /* Smaller font size on mobile */
+        }
 
-.heading {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.subheading {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 30px;
-}
-
-.steps {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.step {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.step img {
-    max-width: 110%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.step-title {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    font-weight: lighter;
-}
-
-.para {
-    font-size: 1.2rem;
-    font-weight: bolder;
-}
-
-.footer {
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #777;
-}
-
-@media only screen and (max-width: 768px) {
-    header {
-        flex-direction: row; /* Keep items in the same line */
-        padding: 10px 20px;
-        justify-content: flex-start; /* Align the logo and heading to the left */
+        header nav a {
+            padding: 8px 15px;
+            /* Smaller padding on mobile */
+        }
     }
-
-    header .logo {
-        max-width: 100px; /* Adjust logo size for smaller screens */
-    }
-
-    header h1 {
-        font-size: 3rem; /* Reduce font size on smaller screens */
-        text-align: left; /* Ensures text is left aligned */
-        margin-left: 10px; /* Optional: Add space between logo and text */
-    }
-
-    header nav {
-        margin-left: 10px;
-        margin-left: auto; /* Pushes nav to the right */
-    }
-
-    header nav a {
-        font-size: 0.9rem; /* Smaller font size for navigation items */
-    }
-}
-
-/* For mobile devices (480px or below) */
-@media only screen and (max-width: 480px) {
-    header {
-        padding: 10px 15px; /* Reduce padding on mobile */
-    }
-
-    header .logo {
-        max-width: 60px; /* Further reduce logo size on mobile */
-    }
-
-    header nav {
-        margin-left: auto; /* Pushes nav to the right */   
-    }
-
-    header h1 {
-        font-size: 2rem; /* Smaller font size on mobile */
-    }
-
-    header nav a {
-        padding: 8px 15px; /* Smaller padding on mobile */
-    }
-}
